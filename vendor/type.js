@@ -14,7 +14,8 @@
   var canvas = document.getElementById("canvas");
   var toggle = document.getElementById("fx-toggle");
   var dock = document.getElementById("dock");
-  var ctx = canvas.getContext("2d", { alpha: false });
+  var ctx = canvas.getContext("2d", { alpha: false }) || canvas.getContext("2d");
+  if (!ctx) return;
   var buttons = dock.querySelectorAll("button[data-mode]");
 
   var glyphs = [];
@@ -678,17 +679,13 @@
   canvas.addEventListener("pointerup", endPointer);
   canvas.addEventListener("pointercancel", endPointer);
 
-  if (typeof ResizeObserver === "function") {
-    var ro = new ResizeObserver(function () { measure(); });
-    ro.observe(canvas);
-  } else {
-    window.addEventListener("resize", measure);
-  }
-
+  // Measure from the frame only. Setting canvas.width clears the bitmap, so a
+  // resize observer must not run between that write and the next paint.
   measure();
   if (W >= 2 && glyphs.length) {
     tick(0.016, 0.4);
     paint();
+    markReady();
   }
   requestAnimationFrame(frame);
 })();
