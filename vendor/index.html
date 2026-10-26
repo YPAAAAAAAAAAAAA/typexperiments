@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>typexperiments</title>
+<link rel="stylesheet" href="type.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="canvas" aria-label="Kinetic type"></canvas>
+  <p id="credit">idea after @pablostanley (pablostanley/typexperiments); clean-room implementation, no code copied</p>
+  <button type="button" id="fx-toggle" aria-label="Effects" aria-expanded="false">Aa</button>
+</div>
+<aside id="dock">
+  <div class="modes" role="group" aria-label="Effects">
+    <button type="button" data-mode="morph">Morph</button>
+    <button type="button" data-mode="explode">Explode</button>
+    <button type="button" data-mode="pour">Pour</button>
+    <button type="button" data-mode="wave" class="on" aria-pressed="true">Wave</button>
+    <button type="button" data-mode="type">Type</button>
+    <button type="button" data-mode="vortex">Vortex</button>
+    <button type="button" data-mode="lava" class="lava">Cursor is Lava</button>
+  </div>
+</aside>
+<script src="type.js"></script>
+</body>
+</html>
