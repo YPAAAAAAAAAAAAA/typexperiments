@@ -1,0 +1,20 @@
+{
+  "id": "typexperiments",
+  "title": {
+    "en": "typexperiments",
+    "zh": "字体实验"
+  },
+  "intro": {
+    "en": "Per-letter kinetic type on a phone canvas. Thumb buttons play Morph, Explode, Pour, Wave, Type, and Vortex. Cursor is Lava follows a finger and pushes every letter aside.",
+    "zh": "手机画布上的逐字动态排印。拇指按钮可播放形变、炸开、倾泻、波动、打字与漩涡。熔岩光标跟随手指，把每个字母推开。"
+  },
+  "officialFiles": [
+    "vendor/index.html",
+    "vendor/type.css",
+    "vendor/type.js",
+    "vendor/LICENSE.txt"
+  ],
+  "playHtml": "play.html",
+  "aspect": "phone",
+  "githubRepo": "ypaaaaaaaaaaaaa/typexperiments"
+}
